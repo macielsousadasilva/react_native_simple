@@ -13,17 +13,21 @@ A estrutura do arquivo é mapeada diretamente para a hierarquia da rota, que é 
 É invertido do modelo que usamos em outros sistemas.Se considerarmos todas as pastas uma pasta "genérica" ou uma "característica", teremos apenas uma pasta "característica", mas muitas pastas "genéricas".
 
 Exemplos de pastas "feature":
-pesquisas
-Admin
-Comercial
-Autor
+
+- Surveys
+- Admin
+- Users
+- Author
+
 
 
 Exemplos de pastas "genéricas":
-componentes
-ajudantes
-lojas
-ações
+
+- components
+- helpers
+- stores
+- actions
+
 
 
 Dada esta configuração de rota:
