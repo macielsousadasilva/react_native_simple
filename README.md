@@ -49,7 +49,7 @@ Agora, configuraríamos nossos diretórios assim:
 
 - app
 - └── screens
--    └── App
+-     └── App
 -         └── screens
 -             ├── Admin
 -             │ └── screens
@@ -58,9 +58,6 @@ Agora, configuraríamos nossos diretórios assim:
 -             └── Course
 -                 └── screens
 -                     └── Assignments
- 
-
-
 
 
 
