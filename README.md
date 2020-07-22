@@ -2,10 +2,10 @@
 
 
 # Motivações
-Propriedade clara dos recursos
-Previsibilidade de uso do módulo (refatoração, manutenção, você sabe o que é compartilhado, o que não é, evita regressões acidentais, evita enormes diretórios de módulos não reutilizáveis, etc.)
-O IC executa apenas os testes que importam (futuro)
-Divisão de código (futuro)
+- Propriedade clara dos recursos
+- Previsibilidade de uso do módulo (refatoração, manutenção, você sabe o que é compartilhado, o que não é, evita regressões acidentais, evita enormes diretórios de módulos não reutilizáveis, etc.)
+- O CI executa apenas os testes que importam (futuro)
+- Divisão de código (futuro)
 
 
 # Como funciona
@@ -99,7 +99,7 @@ app
 
 
 Com essa estrutura, cada tela tem seu próprio diretório para armazenar seus módulos. Em outras palavras, introduzimos o "escopo" em nossa estrutura de arquivos do aplicativo.
-Cada um provavelmente terá um components diretório.
+### Cada um provavelmente terá um components diretório.
 
 ```
 app
@@ -137,7 +137,7 @@ app
 Esses componentes são usadosapenas na tela atual, nem mesmo nas telas filho.E quando você tem alguns componentes compartilhados entre as telas?
 
 
-# Módulos compartilhados
+### Módulos compartilhados
 
 Toda tela também possui um diretório genérico "compartilhado".Se seus filhos compartilharem algum componente entre si ou com o pai, colocaremos o código compartilhado em "shared".Aqui está o nosso aplicativo crescente com alguns novos módulos compartilhados e não compartilhados.
 
@@ -194,14 +194,14 @@ Colocamos componentes compartilhados no shared diretório mais próximo possíve
 
 
 
-# Resolução do módulo compartilhado
+### Resolução do módulo compartilhado
 
 A maneira como os módulos no CommonJS são resolvidos é bastante simples na prática: tudo é relativo a partir do arquivo atual.
 Há um pedaço de "mágica" na maneira como os módulos são resolvidos. Quando você faz um requisito não relativo, como require('moment') o resolvedor primeiro tenta encontrá-lo node_modules/moment. Se não estiver lá, ele procurará dentro ../node_modules/moment e subirá na árvore até encontrá-lo.
 Fizemos isso de forma a shared resolver da mesma maneira com o webpack modulesDirectories. 
 Dessa forma, você não precisa fazer require('../../../../../../../../../../shared/Avatar') isso simplesmente, require('components/Avatar') não importa onde esteja.
 
-# Testes
+### Testes
 
 Os testes ficam ao lado dos módulos que eles testam.Testes parashared/util/createStore.jsviver em shared/util/__tests__/createStore.test.js.
 Agora, nosso aplicativo tem vários__tests__diretórios:
@@ -232,7 +232,7 @@ app
 
 
 
-Por que "telas"?
+### Por que "telas"?
 A outra opção é "views", que se tornou muito parecida com "controller".O que isso significa?Tela me parece bastante intuitiva para significar "uma tela específica no aplicativo" e não algo que é compartilhado.Tem o benefício adicional de que ainda não existe um "MSC"; portanto, a palavra "tela" faz com que as pessoas perguntem "o que é uma tela?"em vez de assumir que eles sabem o que uma "visão" deve ser.
 
 
