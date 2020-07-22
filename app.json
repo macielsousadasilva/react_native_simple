@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "nome do app",
+    "slug": "nomedoapp",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A4595"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "br.com.nomedoapp",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "br.com.nomedoapp",
+      "versionCode": 1
+    },
+    "description": "Descrição do seu projeto",
+    "githubUrl": "https://github.com/macielsousadasilva/react_native_simple"
+  }
+}

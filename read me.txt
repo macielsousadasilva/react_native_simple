@@ -1,0 +1,77 @@
+
+#PARTE MOBILE
+npm install -g expo-cli
+
+#cria o projeto start mobile
+expo init mobile
+(blank (TypeScript))
+
+
+#Guia sobre o expo
+https://github.com/Rocketseat/expo-common-issues
+
+
+#para instalar uma fonte de forma automatizada atraves do expo
+expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
+expo install expo-font @expo-google-fonts/inter 
+
+#Utilizado para criação de rotas e navegação
+https://reactnavigation.org/docs/getting-started
+npm install @react-navigation/native
+
+#Pacotes para a navegação, arrasto, telas, e muito mais com o expo
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+#Pacotes para a navegação, arrasto, telas, e muito mais com o React-Native
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+
+#Pacote para navegação navigation stack
+npm install @react-navigation/stack
+
+
+#Para uso de mapas dentro do Reac-native utilizamos
+expo install react-native-maps 
+
+
+#Para contants de styles
+expo install expo-constants
+
+
+
+#Instalado para poder colocarmos svg
+expo install react-native-svg
+
+
+# Axios usado para comunicação com API
+npm install axios
+
+
+#busca a geo localização atual  do usuario 
+expo install expo-location
+
+
+#Para utilizar email
+expo install expo-mail-composer
+
+
+
+#createMaterialBottomTabNavigator Navegação do menu de baixo 
+npm install @react-navigation/material-bottom-tabs react-native-paper
+
+#cria gradiente
+expo install expo-linear-gradient
+use import LinearGradient from 'react-native-linear-gradient';
+ <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']}>
+    <Text>
+    Your Text Here
+    </Text>
+</LinearGradient> 
+
+
+#add lib de graficos
+npm install react-native-chart-kit
+
+
+#install formulario react-native-elements
+npm install react-native-elements
