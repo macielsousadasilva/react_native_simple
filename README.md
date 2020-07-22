@@ -46,17 +46,17 @@ var routes = (
 
 Agora, configuraríamos nossos diretórios assim:
 
-app
-└── screens
-    └── App
-        └── screens
-            ├── Admin
-            │ └── screens
-            │     ├── Reports
-            │     └── Users
-            └── Course
-                └── screens
-                    └── Assignments
+-app
+- └── screens
+-    └── App
+-         └── screens
+-             ├── Admin
+-             │ └── screens
+-             │     ├── Reports
+-             │     └── Users
+-             └── Course
+-                 └── screens
+-                     └── Assignments
  
 
 
@@ -67,26 +67,26 @@ app
 
 Em seguida, cada uma dessas telas possui um index.js arquivo, que é o arquivo que lida com a entrada na tela, também conhecido como "Manipulador de rota" no roteador do React.É muito parecido com um Route em Ember.Também teremos algumas coisas de bootstrap de aplicativos de nível superior na raiz, como config/routes.js.
 
-app
-├── config
-│ └── routes.js
-├── screens
-│ └── App
-│     ├── screens
-│     │ ├── Admin
-│     │ │ ├── screens
-│     │ │ │ ├── Reports
-│     │ │ │ │ └── index.js
-│     │ │ │ └── Users
-│     │ │ │     └── index.js
-│     │ │ └── index.js
-│     │ └── Course
-│     │     ├── screens
-│     │     │ └── Assignments
-│     │     │     └── index.js
-│     │     └── index.js
-│     └── index.js
-└── index.js
+- app
+- ├── config
+- │ └── routes.js
+- ├── screens
+- │ └── App
+- │     ├── screens
+- │     │ ├── Admin
+- │     │ │ ├── screens
+- │     │ │ │ ├── Reports
+- │     │ │ │ │ └── index.js
+- │     │ │ │ └── Users
+- │     │ │ │     └── index.js
+- │     │ │ └── index.js
+- │     │ └── Course
+- │     │     ├── screens
+- │     │     │ └── Assignments
+- │     │     │     └── index.js
+- │     │     └── index.js
+- │     └── index.js
+- └── index.js
 
 
 
@@ -98,32 +98,32 @@ app
 Com essa estrutura, cada tela tem seu próprio diretório para armazenar seus módulos. Em outras palavras, introduzimos o "escopo" em nossa estrutura de arquivos do aplicativo.
 Cada um provavelmente terá um components diretório.
 
-app
-├── config
-│ └── routes.js
-├── screens
-│ └── App
-│     ├── components
-│     ├── screens
-│     │ ├── Admin
-│     │ │ ├── components
-│     │ │ ├── screens
-│     │ │ │ ├── Reports
-│     │ │ │ │ ├── components
-│     │ │ │ │ └── index.js
-│     │ │ │ └── Users
-│     │ │ │     ├── components
-│     │ │ │     └── index.js
-│     │ │ └── index.js
-│     │ └── Course
-│     │     ├── components
-│     │     ├── screens
-│     │     │ └── Assignments
-│     │     │     ├── components
-│     │     │     └── index.js
-│     │     └── index.js
-│     └── index.js
-└── index.js
+- app
+- ├── config
+- │ └── routes.js
+- ├── screens
+- │ └── App
+- │     ├── components
+- │     ├── screens
+- │     │ ├── Admin
+- │     │ │ ├── components
+- │     │ │ ├── screens
+- │     │ │ │ ├── Reports
+- │     │ │ │ │ ├── components
+- │     │ │ │ │ └── index.js
+- │     │ │ │ └── Users
+- │     │ │ │     ├── components
+- │     │ │ │     └── index.js
+- │     │ │ └── index.js
+- │     │ └── Course
+- │     │     ├── components
+- │     │     ├── screens
+- │     │     │ └── Assignments
+- │     │     │     ├── components
+- │     │     │     └── index.js
+- │     │     └── index.js
+- │     └── index.js
+- └── index.js
 
 
 
@@ -134,45 +134,47 @@ Esses componentes são usadosapenas na tela atual, nem mesmo nas telas filho.E q
 # Módulos compartilhados
 
 Toda tela também possui um diretório genérico "compartilhado".Se seus filhos compartilharem algum componente entre si ou com o pai, colocaremos o código compartilhado em "shared".Aqui está o nosso aplicativo crescente com alguns novos módulos compartilhados e não compartilhados.
-app
-├── config
-│ └── routes.js
-├── screens
-│ └── App
-│     ├── components
-│     ├── screens
-│     │ ├── Admin
-│     │ │ ├── components
-│     │ │ ├── screens
-│     │ │ │ ├── Reports
-│     │ │ │ │ ├── components
-│     │ │ │ │ ├── stores
-│     │ │ │ │ │ └── ReportsStore.js
-│     │ │ │ │ └── index.js
-│     │ │ │ └── Users
-│     │ │ │     ├── components
-│     │ │ │     └── index.js
-│     │ │ ├── shared
-│     │ │ │ └── stores
-│     │ │ │     ├── AccountStore.js
-│     │ │ │     └── UserStore.js
-│     │ │ └── index.js
-│     │ └── Course
-│     │     ├── components
-│     │     ├── screens
-│     │     │ └── Assignments
-│     │     │     ├── components
-│     │     │     └── index.js
-│     │     └── index.js
-│     ├── shared
-│     │ └── components
-│     │     ├── Avatar.js
-│     │     └── Icon.js
-│     └── index.js
-├── shared
-│ └── util
-│     └── createStore.js
-└── index.js
+- app
+- ├── config
+- │ └── routes.js
+- ├── screens
+- │ └── App
+- │     ├── components
+- │     ├── screens
+- │     │ ├── Admin
+- │     │ │ ├── components
+- │     │ │ ├── screens
+- │     │ │ │ ├── Reports
+- │     │ │ │ │ ├── components
+- │     │ │ │ │ ├── stores
+- │     │ │ │ │ │ └── ReportsStore.js
+- │     │ │ │ │ └── index.js
+- │     │ │ │ └── Users
+- │     │ │ │     ├── components
+- │     │ │ │     └── index.js
+- │     │ │ ├── shared
+- │     │ │ │ └── stores
+- │     │ │ │     ├── AccountStore.js
+- │     │ │ │     └── UserStore.js
+- │     │ │ └── index.js
+- │     │ └── Course
+- │     │     ├── components
+- │     │     ├── screens
+- │     │     │ └── Assignments
+- │     │     │     ├── components
+- │     │     │     └── index.js
+- │     │     └── index.js
+- │     ├── shared
+- │     │ └── components
+- │     │     ├── Avatar.js
+- │     │     └── Icon.js
+- │     └── index.js
+- ├── shared
+- │ └── util
+- │     └── createStore.js
+- └── index.js
+
+
 Nota Admin/shared; Reports e Users ambos podem acessar as lojas compartilhadas. 
 Além disso, todas as telas do aplicativo podem usar Avatar.js e Icon.js.
 Colocamos componentes compartilhados no shared diretório mais próximo possível e o movemos para a raiz, conforme necessário.
