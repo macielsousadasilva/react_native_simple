@@ -233,6 +233,8 @@ app
 
 
 ### Por que "telas"?
-A outra opção é "views", que se tornou muito parecida com "controller".O que isso significa?Tela me parece bastante intuitiva para significar "uma tela específica no aplicativo" e não algo que é compartilhado.Tem o benefício adicional de que ainda não existe um "MSC"; portanto, a palavra "tela" faz com que as pessoas perguntem "o que é uma tela?"em vez de assumir que eles sabem o que uma "visão" deve ser.
+A outra opção é "views", que se tornou muito parecida com "controller". 
+O que isso significa?
+Tela me parece bastante intuitiva para significar "uma tela específica no aplicativo" e não algo que é compartilhado.Tem o benefício adicional de que ainda não existe um "MSC"; portanto, a palavra "tela" faz com que as pessoas perguntem "o que é uma tela?" em vez de assumir que eles sabem o que uma "visão" deve ser.
 
 
