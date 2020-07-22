@@ -21,7 +21,7 @@ Exemplos de pastas "feature":
 
 
 
-Exemplos de pastas "genéricas":
+Exemplos de pastas "genérica":
 
 - components
 - helpers
@@ -203,8 +203,9 @@ Dessa forma, você não precisa fazer require('../../../../../../../../../../sha
 
 ### Testes
 
-Os testes ficam ao lado dos módulos que eles testam.Testes parashared/util/createStore.jsviver em shared/util/__tests__/createStore.test.js.
-Agora, nosso aplicativo tem vários__tests__diretórios:
+Os testes ficam ao lado dos módulos que eles testam.
+Testes para shared/util/createStore.js funcionar em shared/util/__tests__/createStore.test.js
+Agora, nosso aplicativo tem vários __tests__ diretórios:
 
 
 ```
@@ -235,6 +236,7 @@ src
 ### Por que "telas"?
 A outra opção é "views", que se tornou muito parecida com "controller". 
 O que isso significa?
-Tela me parece bastante intuitiva para significar "uma tela específica no aplicativo" e não algo que é compartilhado.Tem o benefício adicional de que ainda não existe um "MSC"; portanto, a palavra "tela" faz com que as pessoas perguntem "o que é uma tela?" em vez de assumir que eles sabem o que uma "visão" deve ser.
+Tela me parece bastante intuitiva para significar "uma tela específica no aplicativo" e não algo que é compartilhado.
+Tem o benefício adicional de que ainda não existe um "MSC"; portanto, a palavra "tela" faz com que as pessoas perguntem "o que é uma tela?" em vez de assumir que eles sabem o que uma "view" deve ser.
 
 
