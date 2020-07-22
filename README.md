@@ -46,18 +46,17 @@ var routes = (
 
 Agora, configuraríamos nossos diretórios assim:
 
-
-- app
-- └── screens
--     └── App
--         └── screens
--             ├── Admin
--             │ └── screens
--             │     ├── Reports
--             │     └── Users
--             └── Course
--                 └── screens
--                     └── Assignments
+* app
+* └── screens
+*     └── App
+*         └── screens
+*             ├── Admin
+*             │ └── screens
+*             │     ├── Reports
+*             │     └── Users
+*             └── Course
+*                 └── screens
+*                     └── Assignments
 
 
 
