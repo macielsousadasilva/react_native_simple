@@ -87,24 +87,6 @@ Em seguida, cada uma dessas pages que possui um index.js arquivo, que é o arqui
 
 
 ### components
-```
-src
-├── assets
-├── config
-├── components
-│   ├── Modal
-│   │   ├── index.js
-│   │   └── styles.js
-│   └── Button
-│       ├── index.js
-│       └── styles.js
-
-
-```
-
-
-
-Com essa estrutura, cada tela tem seu próprio diretório para criar seu components. Em outras palavras, introduzimos o "escopo" em nossa estrutura de arquivos do aplicativo.
 
 
 ```
