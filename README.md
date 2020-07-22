@@ -94,10 +94,10 @@ Em seguida, cada uma dessas pages que possui um index.js arquivo, que é o arqui
 src
 ├── assets
 ├── components
-│   ├── Modal
+│   ├── Card
 │   │   ├── index.js
 │   │   └── styles.js
-│   └── Card
+│   └── Button
 │       ├── index.js
 │       └── styles.js
 ├── config
