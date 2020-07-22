@@ -30,7 +30,7 @@ Exemplos de pastas "genérica":
 
 Dada esta configuração de rota a navegação do arquivo routes.js:
 
-```
+
 src
 └── routes.js
 
