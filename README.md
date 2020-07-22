@@ -46,6 +46,7 @@ var routes = (
 
 Agora, configuraríamos nossos diretórios assim:
 
+
 - app
 - └── screens
 -    └── App
@@ -195,25 +196,25 @@ Dessa forma, você não precisa fazer require('../../../../../../../../../../sha
 
 Os testes ficam ao lado dos módulos que eles testam.Testes parashared/util/createStore.jsviver em shared/util/__tests__/createStore.test.js.
 Agora, nosso aplicativo tem vários__tests__diretórios:
-app
-├── __tests__
-├── config
-│ └── routes.js
-├── screens
-│ └── App
-│     ├── components
-│     │ ├── __tests__
-│     │ │ └── AppView.test.js
-│     │ └── AppView.js
+- app
+- ├── __tests__
+- ├── config
+- │ └── routes.js
+- ├── screens
+- │ └── App
+- │     ├── components
+- │     │ ├── __tests__
+- │     │ │ └── AppView.test.js
+- │     │ └── AppView.js
  
 ... etc.
  
-├── shared
-│ └── util
-│     ├── __tests__
-│     │ └── createStore.test.js
-│     └── createStore.js
-└── index.js
+- ├── shared
+- │ └── util
+- │     ├── __tests__
+- │     │ └── createStore.test.js
+- │     └── createStore.js
+- └── index.js
 
 
 Por que "telas"?
