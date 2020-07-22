@@ -53,7 +53,7 @@ var routes = (
 Agora, configuraríamos nossos diretórios assim:
 
 ```
-app
+src
 └── screens
     └── App
         └── screens
@@ -69,7 +69,7 @@ app
 Em seguida, cada uma dessas telas possui um index.js arquivo, que é o arquivo que lida com a entrada na tela, também conhecido como "Manipulador de rota" no roteador do React.É muito parecido com um Route em Ember.Também teremos algumas coisas de bootstrap de aplicativos de nível superior na raiz, como config/routes.js.
 
 ```
-app
+src
 ├── config
 │   └── routes.js
 ├── screens
@@ -102,7 +102,7 @@ Com essa estrutura, cada tela tem seu próprio diretório para armazenar seus m�
 ### Cada um provavelmente terá um components diretório.
 
 ```
-app
+src
 ├── config
 │   └── routes.js
 ├── screens
@@ -143,7 +143,7 @@ Toda tela também possui um diretório genérico "compartilhado".Se seus filhos 
 
 
 ```
-app
+src
 ├── config
 │   └── routes.js
 ├── screens
@@ -208,7 +208,7 @@ Agora, nosso aplicativo tem vários__tests__diretórios:
 
 
 ```
-app
+src
 ├── __tests__
 ├── config
 │   └── routes.js
