@@ -54,15 +54,15 @@ Agora, configuraríamos nossos diretórios assim:
 
 ```
 src
-└── screens
+└── pages
     └── App
-        └── screens
+        └── pages
             ├── Admin
-            │   └── screens
+            │   └── pages
             │       ├── Reports
             │       └── Users
             └── Course
-                └── screens
+                └── pages
                     └── Assignments
 ```
 
@@ -72,18 +72,18 @@ Em seguida, cada uma dessas telas possui um index.js arquivo, que é o arquivo q
 src
 ├── config
 │   └── routes.js
-├── screens
+├── pages
 │   └── App
-│       ├── screens
+│       ├── pages
 │       │   ├── Admin
-│       │   │   ├── screens
+│       │   │   ├── pages
 │       │   │   │   ├── Reports
 │       │   │   │   │   └── index.js
 │       │   │   │   └── Users
 │       │   │   │       └── index.js
 │       │   │   └── index.js
 │       │   └── Course
-│       │       ├── screens
+│       │       ├── pages
 │       │       │   └── Assignments
 │       │       │       └── index.js
 │       │       └── index.js
@@ -105,13 +105,13 @@ Com essa estrutura, cada tela tem seu próprio diretório para armazenar seus m�
 src
 ├── config
 │   └── routes.js
-├── screens
+├── pages
 │   └── App
 │       ├── components
-│       ├── screens
+│       ├── pages
 │       │   ├── Admin
 │       │   │   ├── components
-│       │   │   ├── screens
+│       │   │   ├── pages
 │       │   │   │   ├── Reports
 │       │   │   │   │   ├── components
 │       │   │   │   │   └── index.js
@@ -121,7 +121,7 @@ src
 │       │   │   └── index.js
 │       │   └── Course
 │       │       ├── components
-│       │       ├── screens
+│       │       ├── pages
 │       │       │   └── Assignments
 │       │       │       ├── components
 │       │       │       └── index.js
@@ -146,13 +146,13 @@ Toda tela também possui um diretório genérico "compartilhado".Se seus filhos 
 src
 ├── config
 │   └── routes.js
-├── screens
+├── pages
 │   └── App
 │       ├── components
-│       ├── screens
+│       ├── pages
 │       │   ├── Admin
 │       │   │   ├── components
-│       │   │   ├── screens
+│       │   │   ├── pages
 │       │   │   │   ├── Reports
 │       │   │   │   │   ├── components
 │       │   │   │   │   ├── stores
@@ -168,7 +168,7 @@ src
 │       │   │   └── index.js
 │       │   └── Course
 │       │       ├── components
-│       │       ├── screens
+│       │       ├── pages
 │       │       │   └── Assignments
 │       │       │       ├── components
 │       │       │       └── index.js
@@ -213,7 +213,7 @@ src
 ├── __tests__
 ├── config
 │   └── routes.js
-├── screens
+├── pages
 │   └── App
 │       ├── components
 │       │   ├── __tests__
