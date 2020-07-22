@@ -14,37 +14,43 @@ A estrutura do arquivo é mapeada diretamente para a hierarquia da rota, que é 
 
 Exemplos de pastas "feature":
 
-- Surveys
-- Admin
-- Users
-- Author
+- Home
+- Profile
 
 
 
 Exemplos de pastas "genérica":
 
 - components
-- helpers
+- config
 - stores
-- actions
+- services
 
 
 
-Dada esta configuração de rota:
+Dada esta configuração de rota a navegação do arquivo routes.js:
+
+```
+src
+└── routes.js
 
 ```js
-var routes = (
-  <Route name="App">
-    <Route name="Admin">
-      <Route name="Users"/>
-      <Route name="Reports"/>
-    </Route>
-    <Route name="Course">
-      <Route name="Assignments"/>
-    </Route>
-  </Route>
-);
+<NavigationContainer>
+  <AppStack.Navigator
+    headerMode="none"
+    screenOptions={{
+      cardStyle: {
+        backgroundColor: "#B2F8F8", //troca a cor do fundo do app em todas as pages
+      },
+    }}
+  >
+    <AppStack.Screen name="Home" component={Home} />
+    <AppStack.Screen name="Profile" component={Profile} />
+  </AppStack.Navigator>
+</NavigationContainer>
+
 ```
+O mesmo poderá acessar outras paginas e navegar conforme configurarmos.
 
 
 
@@ -58,43 +64,17 @@ src
 ├── components
 ├── config
 └── pages
-    └── App
-        └── pages
-            ├── Admin
-            │   └── pages
-            │       ├── Reports
-            │       └── Users
-            └── Course
-                └── pages
-                    └── Assignments
+    └── Home
+    │    ├── index.js
+    │    └── styles.js
+    └── Profile  
+    │    ├── index.js
+    │    └── styles.js
+                
 ```
 
-Em seguida, cada uma dessas telas possui um index.js arquivo, que é o arquivo que lida com a entrada na tela, também conhecido como "Manipulador de rota" no roteador do React.É muito parecido com um Route em Ember.Também teremos algumas coisas de bootstrap de aplicativos de nível superior na raiz, como config/routes.js.
-
-```
-src
-├── assets
-├── components
-├── config
-│   └── routes.js
-├── pages
-│   └── App
-│       ├── pages
-│       │   ├── Admin
-│       │   │   ├── pages
-│       │   │   │   ├── Reports
-│       │   │   │   │   └── index.js
-│       │   │   │   └── Users
-│       │   │   │       └── index.js
-│       │   │   └── index.js
-│       │   └── Course
-│       │       ├── pages
-│       │       │   └── Assignments
-│       │       │       └── index.js
-│       │       └── index.js
-│       └── index.js
-└── index.js
-```
+Em seguida, cada uma dessas pages que possui um index.js arquivo, que é o arquivo que lida com a entrada na tela, também conhecido como "Manipulador de rota" no roteador do React.
+É muito parecido com um Route em Ember.Também teremos o styles.js que e responsavel por desenvolver o stilo da tela, ficam mais limpo para qualquer manutenção
 
 
 
@@ -103,50 +83,58 @@ src
 
 
 
-Com essa estrutura, cada tela tem seu próprio diretório para armazenar seus módulos. Em outras palavras, introduzimos o "escopo" em nossa estrutura de arquivos do aplicativo.
-### Cada um provavelmente terá um components diretório.
 
+
+### components
 ```
 src
 ├── assets
-├── components
 ├── config
-│   └── routes.js
-├── pages
-│   └── App
-│       ├── components
-│       ├── pages
-│       │   ├── Admin
-│       │   │   ├── components
-│       │   │   ├── pages
-│       │   │   │   ├── Reports
-│       │   │   │   │   ├── components
-│       │   │   │   │   └── index.js
-│       │   │   │   └── Users
-│       │   │   │       ├── components
-│       │   │   │       └── index.js
-│       │   │   └── index.js
-│       │   └── Course
-│       │       ├── components
-│       │       ├── pages
-│       │       │   └── Assignments
-│       │       │       ├── components
-│       │       │       └── index.js
-│       │       └── index.js
-│       └── index.js
-└── index.js
+├── components
+│   ├── Modal
+│   │   ├── index.js
+│   │   └── styles.js
+│   └── Button
+│       ├── index.js
+│       └── styles.js
+
+
 ```
 
 
 
+Com essa estrutura, cada tela tem seu próprio diretório para criar seu components. Em outras palavras, introduzimos o "escopo" em nossa estrutura de arquivos do aplicativo.
 
 
-Esses componentes são usadosapenas na tela atual, nem mesmo nas telas filho.E quando você tem alguns componentes compartilhados entre as telas?
+```
+
+src
+├── assets
+├── components
+│   ├── Modal
+│   │   ├── index.js
+│   │   └── styles.js
+│   └── Card
+│       ├── index.js
+│       └── styles.js
+├── config
+├── pages
+│   ├── Home
+│   │   ├── index.js
+│   │   └── styles.js
+│   └── Profile
+│       ├── index.js
+│       └── styles.js
+
+```
 
 
-### Módulos compartilhados
+Esses componentes são usados de forma global a fins de reutilizar o que foi desenvolvido, evitando repetição de codigos para interface compartilhando entre as pages.
 
-Toda tela também possui um diretório genérico "compartilhado".Se seus filhos compartilharem algum componente entre si ou com o pai, colocaremos o código compartilhado em "shared".Aqui está o nosso aplicativo crescente com alguns novos módulos compartilhados e não compartilhados.
+
+### Serviços compartilhados
+
+Toda page precisa de informações e busca essas informações de Api's e precisamos organizar os endpoints por esse motivo utilizamos a pasta "services" onde qualquer tipo de configuração de busca de serviços externos ou internos como banco de dados e busca de informações.
 
 
 ```
@@ -154,98 +142,30 @@ src
 ├── assets
 ├── components
 ├── config
-│   └── routes.js
 ├── pages
-│   └── App
-│       ├── components
-│       ├── pages
-│       │   ├── Admin
-│       │   │   ├── components
-│       │   │   ├── pages
-│       │   │   │   ├── Reports
-│       │   │   │   │   ├── components
-│       │   │   │   │   ├── stores
-│       │   │   │   │   │   └── ReportsStore.js
-│       │   │   │   │   └── index.js
-│       │   │   │   └── Users
-│       │   │   │       ├── components
-│       │   │   │       └── index.js
-│       │   │   ├── shared
-│       │   │   │   └── stores
-│       │   │   │       ├── AccountStore.js
-│       │   │   │       └── UserStore.js
-│       │   │   └── index.js
-│       │   └── Course
-│       │       ├── components
-│       │       ├── pages
-│       │       │   └── Assignments
-│       │       │       ├── components
-│       │       │       └── index.js
-│       │       └── index.js
-│       ├── shared
-│       │   └── components
-│       │       ├── Avatar.js
-│       │       └── Icon.js
-│       └── index.js
-├── shared
-│   └── util
-│       └── createStore.js
-└── index.js
+└── services
+    └── api.js
 ```
 
 
-Nota Admin/shared; Reports e Users ambos podem acessar as lojas compartilhadas. 
-Além disso, todas as telas do aplicativo podem usar Avatar.js e Icon.js.
-Colocamos componentes compartilhados no shared diretório mais próximo possível e o movemos para a raiz, conforme necessário.
 
 
 
 
 
+### Store para comunicação e organização de informações
 
-### Resolução do módulo compartilhado
-
-A maneira como os módulos no CommonJS são resolvidos é bastante simples na prática: tudo é relativo a partir do arquivo atual.
-Há um pedaço de "mágica" na maneira como os módulos são resolvidos. Quando você faz um requisito não relativo, como require('moment') o resolvedor primeiro tenta encontrá-lo node_modules/moment. Se não estiver lá, ele procurará dentro ../node_modules/moment e subirá na árvore até encontrá-lo.
-Fizemos isso de forma a shared resolver da mesma maneira com o webpack modulesDirectories. 
-Dessa forma, você não precisa fazer require('../../../../../../../../../../shared/Avatar') isso simplesmente, require('components/Avatar') não importa onde esteja.
-
-### Testes
-
-Os testes ficam ao lado dos módulos que eles testam.
-Testes para shared/util/createStore.js funcionar em shared/util/__tests__/createStore.test.js
-Agora, nosso aplicativo tem vários __tests__ diretórios:
-
+Utilizamos o store para utilizar e organizar as informações, distribuir em qualquer tela ou atualizar alguma informação utilizando o redux ou outra biblioteca.
 
 ```
 src
-├── __tests__
+├── assets
+├── components
 ├── config
-│   └── routes.js
 ├── pages
-│   └── App
-│       ├── components
-│       │   ├── __tests__
-│       │   │   └── AppView.test.js
-│       │   └── AppView.js
+├── services
+└── store
+    └── index.js
 
-... etc.
-
-├── shared
-│   └── util
-│       ├── __tests__
-│       │   └── createStore.test.js
-│       └── createStore.js
-└── index.js
 ```
-
-
-
-
-### Por que "telas"?
-A outra opção é "views", que se tornou muito parecida com "controller". 
-O que isso significa?
-Tela me parece bastante intuitiva para significar "uma tela específica no aplicativo" e não algo que é compartilhado.
-Tem o benefício adicional de que ainda não existe um "MSC"; portanto, a palavra "tela" faz com que as pessoas perguntem "o que é uma tela?" em vez de assumir que eles sabem o que uma "view" deve ser.
-
 
