@@ -46,7 +46,7 @@ var routes = (
 
 Agora, configuraríamos nossos diretórios assim:
 
--app
+- app
 - └── screens
 -    └── App
 -         └── screens
