@@ -54,6 +54,9 @@ Agora, configuraríamos nossos diretórios assim:
 
 ```
 src
+├── assets
+├── components
+├── config
 └── pages
     └── App
         └── pages
@@ -70,6 +73,8 @@ Em seguida, cada uma dessas telas possui um index.js arquivo, que é o arquivo q
 
 ```
 src
+├── assets
+├── components
 ├── config
 │   └── routes.js
 ├── pages
@@ -103,6 +108,8 @@ Com essa estrutura, cada tela tem seu próprio diretório para armazenar seus m�
 
 ```
 src
+├── assets
+├── components
 ├── config
 │   └── routes.js
 ├── pages
@@ -144,6 +151,8 @@ Toda tela também possui um diretório genérico "compartilhado".Se seus filhos 
 
 ```
 src
+├── assets
+├── components
 ├── config
 │   └── routes.js
 ├── pages
