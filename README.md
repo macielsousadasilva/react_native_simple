@@ -10,7 +10,7 @@
 
 # Como funciona
 A estrutura do arquivo é mapeada diretamente para a hierarquia da rota, que é mapeada diretamente para a hierarquia da interface do usuário.
-É invertido do modelo que usamos em outros sistemas.Se considerarmos todas as pastas uma pasta "genérica" ou uma "característica", teremos apenas uma pasta "característica", mas muitas pastas "genéricas".
+Se considerarmos todas as pastas uma pasta "genérica", teremos apenas uma pasta "característica", mas muitas pastas "genéricas".
 
 Exemplos de pastas "feature":
 
@@ -86,7 +86,7 @@ Em seguida, cada uma dessas pages que possui um index.js arquivo, que é o arqui
 
 
 
-### components
+### Components
 
 
 ```
@@ -117,7 +117,7 @@ Esses componentes são usados de forma global a fins de reutilizar o que foi des
 
 ### Serviços compartilhados
 
-Toda page precisa de informações e busca essas informações de Api's e precisamos organizar os endpoints por esse motivo utilizamos a pasta "services" onde qualquer tipo de configuração de busca de serviços externos ou internos como banco de dados e busca de informações.
+Toda page precisa de informações e busca essas informações de APIs. Por esse motivo utilizamos a pasta "services" para organizar os endpoints, onde qualquer tipo de configuração de busca de serviços ou conexão com banco de dados.
 
 
 ```
@@ -138,7 +138,7 @@ src
 
 ### Store para comunicação e organização de informações
 
-Utilizamos o store para utilizar e organizar as informações, distribuir em qualquer tela ou atualizar alguma informação utilizando o redux ou outra biblioteca.
+Utilizamos o store para utilizar e organizar as informações, distribuir em qualquer page ou atualizar alguma informação utilizando o redux ou outra biblioteca.
 
 ```
 src
